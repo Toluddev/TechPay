@@ -50,13 +50,30 @@ html, body {
   margin-top: 50px;
 }
 .ooin {
-  background: white; 
-  background-size: 400px 80px;
-  transition:  0.6s; 
+  position: relative;
+  background: white;
+  overflow: hidden;
+  transition: color 0.4s ease;
+  z-index: 1;
 }
+
+.ooin::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #00afef, #ff6a00);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s ease-in-out;
+}
+
+.ooin:hover::before {
+  transform: scaleX(1);
+}
+
 .ooin:hover {
-  background: linear-gradient(90deg, #00afef 0%, #ff6a00 100%);
-  background-position: 300px 0;
+  color: white; /* Optional: text turns white on hover */
 }
 .join {
   background: #f3f3f3;
@@ -304,7 +321,7 @@ html, body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #eee4;
+  background-color: rgba(0, 0, 0, 0.267);
   border: none;
   color: #fff;
   font-family: monospace;
@@ -471,5 +488,105 @@ html, body {
   }
   .carousel .list .item .content .title{
       font-size: 30px;
+  }
+}
+/* === RESPONSIVE STYLES (Preserve layout) === */
+@media (max-width: 1024px) {
+  .carousel .list .item .content {
+    width: 90%;
+    padding-right: 0;
+  }
+
+  .carousel .list .item .buttons {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 40px;
+    justify-content: center;
+  }
+
+  .carousel .list .item .buttons button {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .thumbnail {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .thumbnail .item {
+    width: 120px;
+    height: 180px;
+  }
+
+  .carousel .list .item .content {
+    top: 10%;
+  }
+
+  .arrows {
+    right: 50%;
+    transform: translateX(50%);
+    max-width: 70%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel .list .item .content {
+    top: 8%;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .carousel .list .item .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carousel .list .item .buttons button {
+    max-width: 220px;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .thumbnail .item {
+    width: 100px;
+    height: 150px;
+  }
+
+  .arrows {
+    top: 95%;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    height: 90vh;
+  }
+
+  .carousel .list .item .content {
+    width: 100%;
+    padding: 0 10px;
+    font-size: 0.9rem;
+  }
+
+  .carousel .list .item .buttons button {
+    font-size: 0.8rem;
+    height: 40px;
+  }
+
+  .thumbnail .item {
+    width: 80px;
+    height: 120px;
+  }
+
+  .arrows {
+    top: 92%;
+    gap: 5px;
+    max-width: 90%;
   }
 }

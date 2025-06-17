@@ -11,7 +11,7 @@ const Navbar = () => {
 ]
 const[ active, setActive ]= useState('');
   return (
-     <div className="z-[100] w-full my-auto mx-0 h-16 md:px-[40px] px-8 py-10 flex items-center justify-between fixed bg-white top-0 ">
+     <div className="z-[100] w-full my-auto mx-0 h-16 md:px-[40px] px-8 py-10 flex items-center justify-between fixed bg-transparent top-0 ">
       <span className="flex items-center right-[209px]">
       <img src="https://techpay.ng/assets/img/black-logo.png" alt="Techpay" height="19px" width="118px" className="absolute" />
       </span>
