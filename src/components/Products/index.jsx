@@ -1,6 +1,7 @@
 import React from 'react';
 import banner from "../../assets/banner.png";
 import { IoCheckmarkOutline } from "react-icons/io5";
+import SectionWrapper from "../../hoc/SectionWrapper";
 
 const Products = () => {
   return (
@@ -27,30 +28,32 @@ const Products = () => {
         </span>
 
         {/* Product List */}
-        <div className="flex flex-col sm:flex-row flex-wrap gap-6 mt-5">
-          <div className="flex flex-col gap-3 w-full sm:w-[48%]">
-            <div className="ooin flex items-center gap-3 bg-white py-2 px-2 rounded-[8px] shadow">
+        <div className="flex flex-col sm:flex-row gap-6 mt-5">
+          {/* Left Column (3 items) */}
+          <div className="flex flex-col gap-3 w-full sm:w-1/2">
+            <div className="ooin flex items-center justify-center gap-3 bg-white py-2 px-4 rounded-[8px] shadow text-center">
               <IoCheckmarkOutline color="#60a5fa" />
-              <span>Techpay Mobile Application</span>
+              <span className="text-center">Techpay Mobile Application</span>
             </div>
-            <div className="ooin flex items-center gap-3 bg-white py-2 px-2 rounded-[8px] shadow">
+            <div className="ooin flex items-center justify-center gap-3 bg-white py-2 px-4 rounded-[8px] shadow text-center">
               <IoCheckmarkOutline color="#60a5fa" />
-              <span>Techpay Wallet</span>
+              <span className="text-center">Techpay Wallet</span>
             </div>
-            <div className="ooin flex items-center gap-3 bg-white py-2 px-2 rounded-[8px] shadow">
+            <div className="ooin flex items-center justify-center gap-3 bg-white py-2 px-4 rounded-[8px] shadow text-center">
               <IoCheckmarkOutline color="#60a5fa" />
-              <span>Techpay Payment Application</span>
+              <span className="text-center">Techpay Payment Application</span>
             </div>
           </div>
-          
-          <div className="flex flex-col gap-3 w-full sm:w-[48%]">
-            <div className="ooin flex items-center gap-3 bg-white py-2 px-2 rounded-[8px] shadow">
+
+          {/* Right Column (2 items) */}
+          <div className="flex flex-col gap-3 w-full sm:w-1/2">
+            <div className="ooin flex items-center justify-center gap-3 bg-white py-2 px-4 rounded-[8px] shadow text-center">
               <IoCheckmarkOutline color="#60a5fa" />
-              <span>APIs</span>
+              <span className="text-center">APIs</span>
             </div>
-            <div className="ooin flex items-center gap-3 bg-white py-2 px-2 rounded-[8px] shadow">
+            <div className="ooin flex items-center justify-center gap-3 bg-white py-2 px-4 rounded-[8px] shadow text-center">
               <IoCheckmarkOutline color="#60a5fa" />
-              <span>Techpay Collection Application</span>
+              <span className="text-center">Techpay Collection Application</span>
             </div>
           </div>
         </div>
@@ -59,4 +62,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default SectionWrapper(Products, "products");
