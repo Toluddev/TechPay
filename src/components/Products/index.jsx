@@ -30,7 +30,7 @@ const Products = () => {
         {/* Product List */}
         <div className="flex flex-col sm:flex-row gap-6 mt-5">
           {/* Left Column (3 items) */}
-          <div className="flex flex-col gap-3 w-full sm:w-1/2">
+          <div className="flex flex-col gap-3 w-full sm:w-1/2 ]">
             <div className="ooin flex items-center justify-center gap-3 bg-white py-2 px-4 rounded-[8px] shadow text-center">
               <IoCheckmarkOutline color="#60a5fa" />
               <span className="text-center">Techpay Mobile Application</span>
@@ -54,6 +54,7 @@ const Products = () => {
             <div className="ooin flex items-center justify-center gap-3 bg-white py-2 px-4 rounded-[8px] shadow text-center">
               <IoCheckmarkOutline color="#60a5fa" />
               <span className="text-center">Techpay Collection Application</span>
+              
             </div>
           </div>
         </div>
