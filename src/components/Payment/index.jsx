@@ -1,27 +1,33 @@
 import banner2 from "../../assets/banner2.jpeg";
-import SectionWrapper from "../../hoc/SectionWrapper";
 
 const Payment = () => {
   return (
-    <div className="z-[1] w-full h-[60vh] bg-[#fff]">
-        <div className="flex md:flex-row flex-col items-center w-full md:px-[20px] justify-between md:gap-10 gap-28">
-        <div data-aos="fade-right" className="flex flex-col gap-3 w-full ml-5">
-            <span className="text-[#3e4095] text-[35px] font-medium">
-            Easy Payment for Online <br /> Business and Ecommerce <br />Solution
-            </span>
-            <span className="text-slate-400 font-medium md:text-[15px] text-[20px] mt-2">
-            A way of making transactions or paying for goods and services through an electronic medium, <br /> without the use of cheque or cash.
-            </span>
+    <div className="z-[1] w-full min-h-[60vh] bg-white py-10 px-4 sm:px-6 lg:px-20">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+        
+        {/* Text Section */}
+        <div data-aos="fade-right" className="flex flex-col gap-4 w-full md:w-1/2">
+          <h2 className="text-[#3e4095] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[35px] font-semibold leading-tight">
+            Easy Payment for Online <br /> Business and Ecommerce <br /> Solution
+          </h2>
+          <p className="text-slate-500 font-medium text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed">
+            A way of making transactions or paying for goods and services through an electronic medium,
+            <br className="hidden sm:block" />
+            without the use of cheque or cash.
+          </p>
         </div>
-        <img
-            data-aos="fade-up"
-            src={banner2}
-            className="md:w-[63%] w-full"
-            alt=""
-        />
-        </div>
-    </div>
-  )
-}
 
-export default SectionWrapper(Payment, "payment");
+        {/* Image Section */}
+        <div data-aos="fade-up" className="w-full md:w-1/2">
+          <img
+            src={banner2}
+            alt="Payment Banner"
+            className="w-full h-auto object-contain"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Payment;

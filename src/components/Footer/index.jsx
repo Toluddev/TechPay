@@ -1,90 +1,82 @@
-import React from 'react'
-import SectionWrapper from "../../hoc/SectionWrapper";
-
 const Footer = () => {
   return (
-    <div className='relative z-1 text-gray-800'>
-      <div className='footer -z-10 absolute right-[20px] bottom-[80px]'></div>
-      <div className='py-14  z-1'>
-        <div className='grid md:grid-cols-12 grid-cols-1 gap-10 z-100'>
-          <div className='lg:col-span-4 col-span-12 '>
+    <div className="relative z-[1] text-gray-800 bg-white">
+      {/* Decorative background image */}
+      <div className="footer absolute inset-0 opacity-10 -z-10" />
+
+      {/* Main content */}
+      <div className="py-12 px-4 sm:px-6 lg:px-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+          {/* Logo & Description */}
+          <div className="space-y-4">
             <a href="#">
               <img
-                className='h-10 '
-                src='https://techpay.ng/assets/img/black-logo.png'
-                alt='' />
+                className="h-10"
+                src="https://techpay.ng/assets/img/black-logo.png"
+                alt="TechPay logo"
+              />
             </a>
-            <p className='mt-6 text-gray-900 text-[14.5px]'>
-              TechPay Limited is a Financial Technology
-              (FinTech) firm that specializes in the provision of
-              payment and collection solutions to its clients
+            <p className="text-[14px] text-gray-700 leading-relaxed">
+              TechPay Limited is a Financial Technology (FinTech) firm that specializes in
+              the provision of payment and collection solutions to its clients
               (Individual, Corporate or Government).
             </p>
           </div>
-          <div className='lg:col-span-2 md:col-span-4 col-span-12'>
-            <h1 className='tracking-wide text-gray-700 font-semibold'>Company</h1>
-            <ul className='list-none mt-6 space-y-2'>
-              <li>
-                <a href='#' className='hover:text-blue-400 transition-all text-[14.5px] duration-500 ease-in-out'>
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href='#' className='hover:text-blue-400 transition-all text-[14.5px] duration-500 ease-in-out'>
-                  Products
-                </a>
-              </li>
-              <li>
-                <a href='#' className='hover:text-blue-400 transition-all text-[14.5px] duration-500 ease-in-out'>
-                  Partners
-                </a>
-              </li>
-              <li>
-                <a href='#' className='hover:text-blue-400 transition-all text-[14.5px] duration-500 ease-in-out'>
-                  Contact Us
-                </a>
-              </li>
+
+          {/* Company Links */}
+          <div>
+            <h1 className="text-gray-800 font-semibold text-base mb-4">Company</h1>
+            <ul className="space-y-2 text-sm">
+              {["About Us", "Products", "Partners", "Contact Us"].map((link, i) => (
+                <li key={i}>
+                  <a
+                    href="#"
+                    className="hover:text-blue-500 transition-colors duration-300"
+                  >
+                    {link}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
-          <div className='lg:col-span-3 md:col-span-4 col-span-12'>
-            <h2 className='tracking-wide text-gray-700 font-semibold'>
-              Support 
-            </h2>
-            <ul className='list-none space-y-2 mt-6'>
-              <li>
-                <a href='#' className='hover:text-blue-400 transition-all duration-500 ease-in-out'>
-                  FAQ's
-                </a>
-              </li>
-              <li>
-                <a href='#' className='hover:text-blue-400 transition-all duration-500 ease-in-out'>
-                  Terms & Condition
-                </a>
-              </li>
-              <li>
-                <a href='#' className='hover:text-blue-400 transition-all duration-500 ease-in-out'>
-                  Privacy Policy
-                </a>
-              </li>
+
+          {/* Support Links */}
+          <div>
+            <h1 className="text-gray-800 font-semibold text-base mb-4">Support</h1>
+            <ul className="space-y-2 text-sm">
+              {["FAQ's", "Terms & Condition", "Privacy Policy"].map((item, i) => (
+                <li key={i}>
+                  <a
+                    href="#"
+                    className="hover:text-blue-500 transition-colors duration-300"
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
-          <div className='lg:col-span-3 md:col-span-4 col-span-12 space-y-2 '>
-            <h3 className='tracking-wide text-gray-700 font-semibold'>Address</h3>
+
+          {/* Address */}
+          <div className="space-y-2 text-sm">
+            <h3 className="text-gray-800 font-semibold text-base mb-4">Address</h3>
             <p>Location: NECA House, Plot A2, Hakeem Balogun Way, Alausa, Lagos, Nigeria</p>
             <p>Email: info@techpay.ng</p>
             <p>Phone: (+234) 8072589575</p>
           </div>
         </div>
       </div>
-      <div className='border-t border-slate-400 '>
-        <div className='text-center container mx-auto py-7 px-6'>
-          <p className='mb-0'>
-            Copyright  &copy; {new Date().getFullYear()} Techpay Limited
+
+      {/* Footer Bottom Bar */}
+      <div className="border-t border-gray-300">
+        <div className="text-center py-6 px-4 text-sm text-gray-600">
+          <p className="mb-0">
+            &copy; {new Date().getFullYear()} TechPay Limited. All rights reserved.
           </p>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SectionWrapper(Footer, "footer");
+export default Footer;

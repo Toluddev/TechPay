@@ -26,23 +26,6 @@ html, body {
   display: block;
 }
 
-
-
-/*.card{
-  border: 1px solid black;
-  background: black;
-  overflow: hidden;
-  height: 800px;
-  color: #fff;
-}
-.card h1 p {
-  font-size: 1rem;
-}
-.card-top > img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}*/
 .App{
   width: 100%;
   height: 100%;
@@ -86,78 +69,6 @@ html, body {
   background-position: 440px 0;
   
 }
-/* .circle8{
-  height: 400px;
-  width: 400px;
-  border: 1px solid black;
-  border-radius: 5000px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-} 
-.circle{
-  height: 330px;
-  width: 330px;
-  border: 1px solid black;
-  border-radius: 5000px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-
-}
-.circle2,.circle3,.circle4,.circle5{
-  width: 10px;
-  height: 10px;
-  background: rgb(92, 31, 189);
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  overflow: hidden;
-  border-radius: 50%;
-  margin: auto;
-  -webkit-animation: circle 15s linear infinite;
-  animation: circle 15s linear infinite;
-  padding: 10px;
-  z-index: 10;
-
-}
-.circle3{
-  background: orange;
-  animation-delay: 10s; 
-}
-.circle4{
-  background: rgb(14, 225, 67);
-  animation-delay: 19s; 
-}
-.circle5{
-  background: rgb(203, 227, 15);
-  animation-delay: 10;
-}
-
- @-webkit-keyframes circle {
-  0% {
-      transform: rotate(0deg) translate(-165px)rotate(0deg);
-  }
-  100% {
-      transform: rotate(360deg) translate(-165px)rotate(-360deg);
-  }
-}
-@keyframes circle{
-  0%{
-    transform: rotate(0deg)translate(-165px)rotate(0deg);
-  }
-  100%{
-    transform: rotate(360deg)translate(-165px)rotate(-360deg);
-  }
-} */
 .form-control{
   display: block;
   width: 100%;
@@ -201,13 +112,6 @@ html, body {
   opacity: 16%;
   
 }
-/* .neo{
-  height: 100vh;
-  width: 100vw;
-  background-image: linear-gradient(to top, white, transparent);
-  position: absolute;
-  z-index: 10;
-} */
 .carousel{
   height: 100vh;
   margin-top: -50px;
@@ -251,17 +155,7 @@ html, body {
   margin-top: 90px;
   z-index: 100;
 }
-.carousel .list .item .buttons button{
-  border: none;
-  background-color: #ffffff;
-  font-family: Poppins;
-  font-weight: 500;
-  border-radius: 8px;
-  color: black;
-  padding: 2px;
-  width: 150px;
-  height: 45px;
-}
+
 .carousel .list .item .buttons button:nth-child(2){
   background-color: transparent;
   border: 1px solid #fff;
@@ -571,23 +465,64 @@ html, body {
   .carousel .list .item .content {
     width: 100%;
     padding: 0 10px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    top: 20%; /* pushed down */
+    text-align: center;
+  }
+
+ .carousel .list .item .content .author {
+    font-size: 50px;
+    font-weight: 700;
+  }
+
+  .carousel .list .item .content .title {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .carousel .list .item .content .des {
+    font-size: 1.9rem; /* Smaller description */
+    font-weight: 400;
+    margin-top: 5px;
+  }
+
+  .carousel .list .item .buttons {
+    display: flex;
+    flex-direction: row; /* Side-by-side buttons */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
   }
 
   .carousel .list .item .buttons button {
-    font-size: 0.8rem;
-    height: 40px;
+    font-size: 0.75rem;
+    height: 36px;
+    padding: 0 18px;
+    width: auto;
+    max-width: 150px;
   }
 
-  .thumbnail .item {
-    width: 80px;
-    height: 120px;
+  .thumbnail {
+    display: none !important; /* hide the thumbnails */
   }
 
   .arrows {
-    top: 92%;
-    gap: 5px;
-    max-width: 90%;
+    display: flex !important;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 10px;
+    z-index: 2000;
+    position: relative;
+  }
+
+  .arrows button {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
   }
 }
 

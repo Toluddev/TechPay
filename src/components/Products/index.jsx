@@ -1,11 +1,11 @@
 import React from 'react';
 import banner from "../../assets/banner.png";
 import { IoCheckmarkOutline } from "react-icons/io5";
-import "./spikes.css"; // Link the spikes styles
+
 
 const Products = () => {
   return (
-    <section className="relative spikes w-full min-h-screen flex items-center justify-center px-4 py-10">
+    <section className="relative  w-full min-h-screen flex items-center justify-center px-4 py-10">
       <div className="relative z-10 w-full max-w-7xl h-full flex flex-col md:flex-row items-center justify-center gap-10">
         
         {/* Left Image */}
@@ -25,10 +25,10 @@ const Products = () => {
           className="flex flex-col w-full md:w-1/2 px-4"
           data-aos="fade-up"
         >
-          <span className="text-white text-2xl sm:text-3xl lg:text-[35px] font-semibold">
+          <span className="text-gray-700 text-2xl sm:text-3xl lg:text-[35px] font-semibold">
             Our Products
           </span>
-          <span className="text-gray-200 text-sm sm:text-base font-semibold mt-2">
+          <span className="text-gray-600 text-sm sm:text-base font-semibold mt-2">
             To become a one-stop payment and collection solution provider across Africa.
           </span>
 

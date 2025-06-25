@@ -1,16 +1,15 @@
-import React, { Suspense } from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-
-import { BrowserRouter } from 'react-router-dom'
+import React, { Suspense } from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+import './index.css';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Suspense>
-      <BrowserRouter>
+    <BrowserRouter>
+      <Suspense fallback={<div className="text-center mt-10">Loading...</div>}>
         <App />
-      </BrowserRouter>
-    </Suspense>
-  </React.StrictMode>,
-)
+      </Suspense>
+    </BrowserRouter>
+  </React.StrictMode>
+);
