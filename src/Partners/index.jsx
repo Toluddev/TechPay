@@ -28,6 +28,7 @@ function App() {
                   src={url}
                   alt={`Partner ${i}`}
                   className="w-full h-auto object-contain rounded-lg shadow-md aspect-[16/9]"
+                  
                 />
               </div>
             ))}
